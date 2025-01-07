@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  
+  
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  
+       <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imagen a la izquierda + Frase con espacio y enlace</title>
+  <style>
+    /* Contenedor con display flex para poner imagen y texto en la misma línea */
+    .image-text-container {
+      display: flex;
+      align-items: center; /* Centra verticalmente */
+      margin: 20px;       /* Margen opcional alrededor */
+    }
+
+    /* Ajusta el tamaño de la imagen como quieras */
+    .image-text-container img {
+      width: 50px;  /* Cambia este valor para agrandar/encoger la imagen */
+      height: auto;  
+      margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+
+    /* Clase para el enlace (texto clicable) con espacio entre palabras */
+    .clickable-text {
+      word-spacing: 0em;       /* Ajusta este valor a tu gusto (px, em, etc.) */
+      text-decoration: none;   /* Quita el subrayado */
+      color: #007BFF;          /* Color del texto */
+      font-weight: bold;       /* Negrita */
+    }
+
+    /* Hover: cambia el color al pasar el ratón */
+    .clickable-text:hover {
+      color: #0056b3; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-text-container">
+    <!-- Cambia la URL de la imagen a la que desees -->
+    <img 
+      src="https://www.banderas-mundo.es/data/flags/w1600/us.png" 
+      alt="Imagen de ejemplo"
+    />
+Un sitio oficial del Gobierno de los estados unidos 
+    <!-- Texto clicable que redirige al enlace que quieras -->
+    <a 
+      href="https://www.uscis.gov/tools/multilingual-resource-center"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="clickable-text"
+    >
+      ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤIngles|Recursos Multilingues
+    </a>
+  </div>
+
+</body>
+</html>
+  
+  
+  
+  <title>Estatus de casos en linea</title>
+  <!-- Enlazar Hoja de Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <!-- LOGO o título de la página -->
+    <!-- Sustituye la imagen por una de tu propiedad o de uso libre -->
+    <img src="https://egov.uscis.gov/static/media/USCIS_Insignia_wm_fc.503a4bdbed7e186ca6070aa2a15795fa.svg" alt="Logo de la página" class="logo" />
+    
+    
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Varias palabras clicables en la misma fila</title>
+</head>
+<body>
+
+  <p>
+    <!-- Cada <a> es una palabra/frase que redirige a un enlace distinto.
+         Para dar un pequeño espacio entre enlaces, puedes usar un 
+         simple espacio o un margen con CSS inline. -->
+    
+    <!-- Ejemplo con margen en línea (opcional): style="margin-right: 10px;" -->
+   <a href="https://www.uscis.gov/es/temas" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      temas
+    </a>
+
+    <a href="https://www.uscis.gov/es/formularios/formularios" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      formularios
+    </a>
+
+    <a href="https://www.uscis.gov/es/noticias" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      noticias
+    </a>
+    
+     <a href="https://www.uscis.gov/es/ciudadania" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      ciudadania
+    </a>
+    
+     <a href="https://www.uscis.gov/es/residencia-permanente-tarjeta-verde" target="_blank" rel="noopener noreferrer" style="margin-right: 50px;">
+     residencia permanente
+    </a>
+    
+     <a href="https://www.uscis.gov/es/herramientas" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      herramientas
+    </a>
+    
+    
+  </p>
+
+</body>
+</html>
+    
+    
+    
+    
+    <h1>El estatus de caso en linea</h1>
+  </header>
+
+    <!-- Sección de Instrucciones -->
+    <section class="info">
+      <h2>Verifique el estado de su caso</h2>
+      <p>
+        Utilice esta herramienta para administrar todas sus solicitudes y peticiones.
+
+
+
+El número de recibo es un identificador único de 13 caracteres que se compone de tres letras y 10 números. Omita los guiones ("-") al ingresar un número de recibo. Sin embargo, puede incluir todos los demás caracteres, incluidos los asteriscos ("*"), si aparecen en su notificación como parte del número de recibo. Cuando se ingresa un número de recibo, el Botón de Verificación de Estado se habilitará y podrá verificar el estado.
+Ingrese el Número de Su Recibo. 
+        <!-- Pon información más detallada si lo deseas -->
+      </p>
+    </section>
+
+    <!-- Formulario para buscar el caso -->
+    <section class="case-checker">
+      <form id="caseForm">
+        <label for="caseNumber">Número de caso:</label>
+        <input type="text" id="caseNumber" name="caseNumber" required />
+        <button type="submit">Verificar Estado</button>
+      </form>
+      <!-- Aquí se mostrará el resultado -->
+      <div id="result"></div>
+    </section>
+
+    <!-- Sección informativa adicional (opcional) -->
+    <section class="extra-info">
+      <h3>Información Importante</h3>
+      <p>
+        <!-- Aquí puedes agregar la información, siempre usando texto tuyo o libre de derechos -->
+        Tenga en cuenta que esta es una pagina aprobada por el gobierno de estados unidos capaz de realizar la revision del estado de los casos migratorios que se estan realizando en estados unidos.
+      </p>
+    </section>
+  </main>
+    
+    <h4>HERRAMIENTAS RELACIONADAS</h4>
+      <p>
+   
+   
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imagen + Texto + Botón (sin afectar otras imágenes)</title>
+  <style>
+    /* Un contenedor único (renombra a tu gusto) */
+    .mi-bloque {
+      display: flex;       /* Alinea imagen y texto/botón en una fila */
+      align-items: center; /* Centra verticalmente (opcional) */
+      gap: 20px;           /* Espacio entre imagen y texto */
+      margin: 20px;        /* Márgenes alrededor */
+    }
+
+    /* Solo afecta a la imagen dentro de .mi-bloque */
+    .mi-bloque .mi-imagen {
+      width: 200px;  /* Ajusta el ancho que desees */
+      height: 200px;  /* Mantiene proporción */
+    }
+
+    /* Contenedor para texto y botón, sigue siendo parte de .mi-bloque */
+    .mi-bloque .mi-info {
+      display: flex;
+      flex-direction: column; /* Texto arriba, botón abajo */
+      gap: 10px;              /* Espacio entre texto y botón */
+    }
+
+    /* Botón con estilo propio */
+    .mi-bloque .mi-boton {
+      background-color: #007BFF; /* Fondo (azul) */
+      color: #fff;               /* Texto blanco */
+      border: none;              /* Sin borde */
+      padding: 10px 20px;        /* Espaciado interno */
+      border-radius: 4px;        /* Bordes redondeados */
+      cursor: pointer;           /* Manito al pasar */
+      font-size: 1rem;           /* Tamaño de fuente */
+    }
+
+    /* Efecto hover en el botón */
+    .mi-bloque .mi-boton:hover {
+      background-color: #0056b3; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    Otras imágenes que tengas en la página 
+    NO se verán afectadas, ya que no usan la clase "mi-bloque" 
+    ni la clase "mi-imagen".
+  -->
+  
+  <!-- Contenedor con clases únicas para no afectar a otras imágenes -->
+  <div class="mi-bloque">
+    <!-- Imagen con clase "mi-imagen" (afecta solo a esta) -->
+    <img 
+      src="https://egov.uscis.gov/static/media/coaImage.2acc65eeb587895ee27c.jpg"
+      alt="Imagen de ejemplo"
+      class="mi-imagen"
+    />
+
+    <div class="mi-info">
+      <!-- Tu texto -->
+      <p>
+       Cambio de dirección
+Si usted se ha mudado y/o ya no vive en la misma casa/apto de antes, le recomendamos que actualice su dirección con USCIS para asegurarse de que reciba toda la correspondencia y beneficios de parte de nuestra manera oportuna y evitar posibles retrasos o denegaciones relacionadas con su caso.
+
+Visite la página web de Cambio de Dirección para comenzar el proceso.
+      </p>
+
+      <!-- Botón que abre el link en otra pestaña -->
+      <button 
+        class="mi-boton"
+        onclick="window.open('https://www.uscis.gov/es/cambiodedireccion', '_blank')"
+      >
+        Visita la página
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
+    
+    
+    
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Herramientas Relacionadas - Ejemplo</title>
+  <style>
+    /* Contenedor principal que agrupa las 3 tarjetas */
+    .related-tools-container {
+      display: flex;              /* Pone las tarjetas en la misma fila */
+      justify-content: center;    /* Centra horizontalmente */
+      align-items: flex-start;    /* Alinea al inicio vertical */
+      gap: 20px;                  /* Espacio entre tarjetas */
+      margin: 40px 0;            /* Separación vertical del bloque */
+      padding: 0 20px;           /* Margen horizontal interno (opcional) */
+    }
+
+    /* Cada recuadro (tarjeta) */
+    .tool-card {
+      flex: 1 1 0;               /* Permite que cada tarjeta se adapte en ancho */
+      max-width: 250px;          /* Ancho máximo de cada tarjeta (ajusta a gusto) */
+      border: 1px solid #ddd;    /* Borde suave */
+      border-radius: 6px;        /* Esquinas redondeadas */
+      padding: 16px;             /* Espaciado interno */
+      text-align: center;        /* Centra texto e imagen */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+      background-color: #fff;    /* Fondo blanco */
+    }
+
+    /* Imagen en cada tarjeta */
+    .tool-card img {
+      width: 100%;     /* Para que ocupe el ancho del contenedor */
+      height: auto;    /* Mantiene la proporción */
+      border-radius: 4px;
+      margin-bottom: 12px; /* Espacio debajo de la imagen */
+    }
+
+    /* Título o texto principal */
+    .tool-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;  /* Espacio debajo del título */
+    }
+
+    /* Texto descriptivo */
+    .tool-card p {
+      font-size: 0.95rem;
+      margin-bottom: 16px; /* Espacio debajo del párrafo */
+    }
+
+    /* Botón de “visita la página” */
+    .visit-button {
+      display: inline-block;
+      background-color: #0063ba; /* Color de fondo (azul) */
+      color: #fff;               /* Texto blanco */
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;     /* Quita subrayado si lo haces <a> en vez de <button> */
+    }
+    
+    /* Hover del botón */
+    .visit-button:hover {
+      background-color: #004a8c; /* Azul más oscuro al pasar el ratón */
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="related-tools-container">
+    <!-- Tarjeta #1 -->
+    <div class="tool-card">
+      <!-- Reemplaza la URL de la imagen por la que prefieras -->
+      <img 
+        src="https://egov.uscis.gov/static/media/sroImage.7a7ff3a4451cf1cd4212.jpg"
+        alt="Herramienta 1"
+      />
+      <h3>Envíe una consulta de caso</h3>
+      <p>
+        
+Envíe su consulta en línea acerca de su caso o solicite otros servicios, como una solicitud de alojamiento, o la manera de corregir un error en su notificación.
+      </p>
+      <button 
+        class="visit-button"
+        onclick="window.open('https://egov.uscis.gov/e-request/Intro.do', '_blank')"
+      >
+        Visita la página
+      </button>
+    </div>
+
+    <!-- Tarjeta #2 -->
+    <div class="tool-card">
+      <img 
+        src="https://egov.uscis.gov/static/media/ptImage.f8cf5b293ccc4a47834d.jpg"
+        alt="Herramienta 2"
+      />
+      <h3>Tiempos de
+Procesamiento de USCIS</h3>
+      <p>
+        
+Ver una estimación de cuánto tiempo está tomando USCIS para procesar su solicitud o petición en sus oficinas.
+      </p>
+      <button 
+        class="visit-button"
+        onclick="window.open('https://egov.uscis.gov/processing-times/es', '_blank')"
+      >
+        Visita la página
+      </button>
+    </div>
+
+    <!-- Tarjeta #3 -->
+    <div class="tool-card">
+      <img
+        src="https://egov.uscis.gov/static/media/olImage.b0b12db4f30e604b3034.jpg"
+        alt="Herramienta 3"
+      />
+      <h3>Localidades de Oficinas de USCIS</h3>
+      <p>
+        Localidades de Oficinas de USCIS
+busque las oficinas locales e internacionales de USCIS y obtenga direcciones a la oficina.
+      </p>
+      <button 
+        class="visit-button"
+        onclick="window.open('https://www.uscis.gov/es/acerca-de-nosotros/encuentre-una-oficina-de-uscis', '_blank')"
+      >
+        Visita la página
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
+     <title>Varias palabras clicables en la misma fila</title>
+</head>
+<body>
+
+  <p>
+    <!-- Cada <a> es una palabra/frase que redirige a un enlace distinto.
+         Para dar un pequeño espacio entre enlaces, puedes usar un 
+         simple espacio o un margen con CSS inline. -->
+    
+    <!-- Ejemplo con margen en línea (opcional): style="margin-right: 10px;" -->
+   <a href="https://www.uscis.gov/es/temas" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      temas
+    </a>
+
+    <a href="https://www.uscis.gov/es/formularios/formularios" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      formularios
+    </a>
+
+    <a href="https://www.uscis.gov/es/noticias" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      noticias
+    </a>
+    
+     <a href="https://www.uscis.gov/es/ciudadania" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      ciudadania
+    </a>
+    
+     <a href="https://www.uscis.gov/es/residencia-permanente-tarjeta-verde" target="_blank" rel="noopener noreferrer" style="margin-right: 50px;">
+     residencia permanente
+    </a>
+    
+     <a href="https://www.uscis.gov/es/herramientas" target="_blank" rel="noopener noreferrer" style="margin-right: 70px;">
+      herramientas
+    </a>
+    
+    
+  </p>
+
+</body>
+</html>
+   
+    
+  <footer>
+    <!-- Pie de página de ejemplo -->
+    <p>&copy; 2025 - USCIS - HOMELAND SECURITY </p> 
+  </footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagen en la parte baja a la izquierda</title>
+  <style>
+    /* Clase que fija la imagen en la esquina inferior izquierda */
+    .fixed-bottom-left {
+      position: left;  /* Fija la posición en la ventana del navegador */
+      bottom: 0;        /* Alinea al borde inferior */
+      left: 0;          /* Alinea al borde izquierdo */
+      width: 300px;     /* Ajusta el ancho a tu preferencia */
+      /* Puedes agregar más estilos según tus gustos:
+         por ejemplo, margen, opacidad, borde, etc. */
+    }
+  </style>
+</head>
+<body>
+  <!-- Imagen en la esquina inferior izquierda -->
+  <img 
+       src="https://egov.uscis.gov/static/media/USCIS_Insignia_wm_fc.503a4bdbed7e186ca6070aa2a15795fa.svg" 
+       alt="Mi imagen fija en la esquina" 
+       class="fixed-bottom-left" 
+  >
+
+</body>
+</html>

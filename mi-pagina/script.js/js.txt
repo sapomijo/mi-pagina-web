@@ -1,0 +1,33 @@
+/**
+ * script.js
+ *
+ * Este archivo maneja la verificación del estado de caso.
+ * Puedes personalizar los números de caso y los mensajes
+ * que quieres mostrar.
+ */
+
+// Aquí puedes definir un objeto con los números de caso y sus respectivos mensajes
+// Para personalizarlo, cambia la clave y el mensaje a lo que necesites:
+const caseStatusData = {
+  "ABC1234567": "Su caso ha sido aprobado. Fecha de aprobación: 5 de enero de 2025.",
+  "XYZ9876543": "Su caso se encuentra en revisión adicional. Contacte a soporte si necesita más información.",
+  "ZZZ1112223": "Su caso está pendiente de documentos adicionales. Por favor envíelos lo antes posible.",
+  "WAC8237829": "SEÑOR PEPITO PEREZ SU CASO NO ESTA APROVADO."
+};
+
+// Esta función se ejecuta al enviar el formulario
+document.getElementById('caseForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Obtener valor del número de caso
+  const caseNumberInput = document.getElementById('caseNumber').value.trim();
+
+  // Comprobar si el número de caso está en el objeto caseStatusData
+  if (caseNumberInput in caseStatusData) {
+    document.getElementById('result').innerText = caseStatusData[caseNumberInput];
+  } else {
+    // Mensaje por defecto si no se encuentra
+    document.getElementById('result').innerText = 
+      "No se ha encontrado información para el número de caso proporcionado.";
+  }
+});
